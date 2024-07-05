@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Logout Page</title>
+  <link rel="stylesheet" href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins&amp;display=swap" />
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: "Poppins", sans-serif;
+    }
+
+    :root {
+      --primary-color: #fcfcfc;
+      --second-color: #d82626;
+      --black-color: #000000;
+    }
+
+    body {
+      background-image: url("http://codingstella.com/wp-content/uploads/2024/01/download-6-scaled.jpeg");
+      background-position: center;
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+      padding: 20px;
+    }
+
+    a {
+      text-decoration: none;
+      color: var(--second-color);
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    .logout_box {
+      width: 100%;
+      max-width: 450px;
+      background-color: rgba(252, 250, 250, 0.8);
+      backdrop-filter: blur(25px);
+      border: 2px solid var(--primary-color);
+      border-radius: 15px;
+      padding: 3em 2.5em;
+      color: var(--second-color);
+      box-shadow: 0px 0px 10px 2px rgba(0, 0, 0, 0.2);
+    }
+
+    .logout-header {
+      position: relative;
+      text-align: center;
+      margin-bottom: 2em;
+    }
+
+    .logout-header span {
+      font-size: 30px;
+      color: var(--black-color);
+      background-color: var(--primary-color);
+      padding: 10px 20px;
+      border-radius: 20px;
+    }
+
+    .info {
+      margin-bottom: 20px;
+      text-align: center;
+    }
+
+    .info p {
+      margin-bottom: 10px;
+    }
+
+    .input-submit {
+      width: 100%;
+      height: 55px;
+      font-size: 16px;
+      background: var(--primary-color);
+      color: var(--second-color);
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    .input-submit:hover {
+      background: var(--black-color);
+    }
+
+    .register {
+      text-align: center;
+      margin-top: 20px;
+    }
+  </style>
+</head>
+<body>
+  <div class="logout_box">
+    <div class="logout-header">
+      <span>Logout</span>
+    </div>
+
+    <div class="info">
+      <p>You have been successfully logged out.</p>
+    </div>
+
+    <input type="submit" value="Log In" class="input-submit" onclick="redirectToLogin()" />
+
+    <div class="register">
+      Don't have an account? <a href="#">Sign up</a>
+    </div>
+  </div>
+
+  <script>
+    function redirectToLogin() {
+      // Replace with your login page URL
+      window.location.href = "login.html";
+    }
+  </script>
+</body>
+</html>

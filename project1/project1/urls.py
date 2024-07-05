@@ -16,7 +16,19 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
+from project1 import views
+
+
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('', views.homePage),
+    path('about-us/', views.aboutUs),
+    path('home/', views.home),
+    path('course/', views.course),
+
+
+    # Creating a Dynamic URL
+    path('course/<courseName>', views.courseDetails),
+
 ]

@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Modern Login Form</title>
+  <link rel="stylesheet" href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins&amp;display=swap" />
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: "Poppins", sans-serif;
+    }
+
+    :root {
+      --primary-color: #fcfcfc;
+      --second-color: #d82626;
+      --black-color: #000000;
+    }
+
+    body {
+      background-image: url("http://codingstella.com/wp-content/uploads/2024/01/download-6-scaled.jpeg");
+      background-position: center;
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+      padding: 20px;
+    }
+
+    a {
+      text-decoration: none;
+      color: var(--second-color);
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    .wrapper {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      background-color: rgba(248, 246, 246, 0.2);
+    }
+
+    .login_box {
+      position: relative;
+      width: 450px;
+      backdrop-filter: blur(25px);
+      border: 2px solid var(--primary-color);
+      border-radius: 15px;
+      padding: 7.5em 2.5em 4em 2.5em;
+      color: var(--second-color);
+      box-shadow: 0px 0px 10px 2px rgba(241, 229, 229, 0.2);
+    }
+
+    .login-header {
+      position: absolute;
+      top: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background-color: var(--primary-color);
+      width: 140px;
+      height: 70px;
+      border-radius: 0 0 20px 20px;
+    }
+
+    .login-header span {
+      font-size: 30px;
+      color: var(--black-color);
+    }
+
+    .login-header::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: -30px;
+      width: 30px;
+      height: 30px;
+      border-top-right-radius: 50%;
+      background: transparent;
+      box-shadow: 15px 0 0 0 var(--primary-color);
+    }
+
+    .login-header::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      right: -30px;
+      width: 30px;
+      height: 30px;
+      border-top-left-radius: 50%;
+      background: transparent;
+      box-shadow: -15px 0 0 0 var(--primary-color);
+    }
+
+    .input_box {
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      margin: 20px 0;
+    }
+
+    .input-field {
+      width: 100%;
+      height: 55px;
+      font-size: 16px;
+      background: transparent;
+      color: var(--second-color);
+      padding-inline: 20px 50px;
+      border: 2px solid var(--primary-color);
+    }
+
+    .input-submit {
+      width: 100%;
+      height: 55px;
+      font-size: 16px;
+      background: var(--primary-color);
+      color: var(--second-color);
+      padding-inline: 20px 50px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    .input-submit:hover {
+      background: var(--black-color);
+    }
+
+    .remember-forgot {
+      display: flex;
+      justify-content: space-between;
+      margin: 20px 0;
+    }
+
+    .remember-me {
+      display: flex;
+      align-items: center;
+    }
+
+    .forgot {
+      text-align: right;
+    }
+
+    .register {
+      text-align: center;
+      margin-top: 20px;
+    }
+  </style>
+</head>
+<body>
+  <div class="wrapper">
+    <div class="login_box">
+      <div class="login-header">
+        <span>Login</span>
+      </div>
+
+      <div class="input_box">
+        <input
+          type="text"
+          id="user"
+          class="input-field"
+          placeholder="Username"
+          required
+        />
+        <i class="bx bx-user"></i>
+      </div>
+
+      <div class="input_box">
+        <input
+          type="password"
+          id="pass"
+          class="input-field"
+          placeholder="Password"
+          required
+        />
+        <i class="bx bx-lock" id="lock-icon"></i>
+        <i class="bx bx-show" id="show-icon" style="display: none"></i>
+      </div>
+
+      <div class="remember-forgot">
+        <div class="remember-me">
+          <input type="checkbox" id="remember" />
+          <label for="remember">Remember me</label>
+        </div>
+
+        <div class="forgot">
+          <a href="#">Forgot password?</a>
+        </div>
+      </div>
+
+      <input type="submit" value="Login" class="input-submit" />
+
+      <div class="register">
+        Don't have an account? <a href="#">Sign up</a>
+      </div>
+    </div>
+  </div>
+  <script>
+    // JavaScript for showing/hiding password
+    const showIcon = document.getElementById('show-icon');
+    const passwordField = document.getElementById('password');
+
+    showIcon.addEventListener('click', function() {
+      const type = passwordField.getAttribute('type') === 'password' ? 'text' : 'password';
+      passwordField.setAttribute('type', type);
+      showIcon.classList.toggle('bx-show');
+      showIcon.classList.toggle('bx-hide');
+    });
+  </script>
+</body>
+</html>
