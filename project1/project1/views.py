@@ -26,8 +26,12 @@ def courseDetails(request, courseName):
 # How to render an HTML template as Response
 
 def homePage(request):
+    # How to pass Data from Django view to Template
     data={
-        'title':'New Home Page'
+        'title':'New Home Page',
+        'bdata':'Welcome to my Page',
+        'clist':['PHP', 'Java', 'Python'],
+
     }
     return render(request,"home.html", data)
 
