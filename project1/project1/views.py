@@ -31,6 +31,11 @@ def homePage(request):
         'title':'New Home Page',
         'bdata':'Welcome to my Page',
         'clist':['PHP', 'Java', 'Python'],
+        'student_details': [
+            {'name':'pradeep', 'phone':9584732734},
+            {'name':'testing', 'phone':6385673929}
+            
+        ]
 
     }
     return render(request,"home.html", data)
