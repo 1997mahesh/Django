@@ -22,13 +22,28 @@ from project1 import views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', views.homePage),
     path('about-us/', views.aboutUs),
-    path('home/', views.home),
     path('course/', views.course),
-
-
+    path('home/', views.home),
+    
     # Creating a Dynamic URL
     path('course/<courseName>', views.courseDetails),
+    
+    
+    #Render an HTML Template as Response
+    #path('', views.homePage_1),
+    
+    
+    #Pass Data From Django View to Template
+    #path('', views.homePage_2),
+    
+    
+    # Using Django Template FOR Loop
+    path('', views.homePage_3),
+    
+    
+    
 
+
+    
 ]

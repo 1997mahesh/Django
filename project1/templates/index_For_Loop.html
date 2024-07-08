@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>For Loop</title>
+</head>
+<body>
+
+    {% for n in clist %}
+    <div>{{forloop.counter}}{{n}}</div>
+    {% endfor %}
+
+    <br>
+
+    <table border="1" cellpading="50">
+        <tr>
+            <th>Name</th>
+            <th>Phone Number</th>
+        </tr>
+        {% for d in student_details%}
+        <tr>
+            <td>  </td>
+            <td>  </td>
+        </tr>
+        {% endfor%}
+
+    </table>
+
+</body>
+</html>
